@@ -1,0 +1,30 @@
+<div *ngIf="car$ | async as car">
+<form #form="ngForm" ngSubmit="onUpdate(car)" >
+  <input type="hidden" name="id" [(ngModel)]="id" >
+  <div class="form-group">
+    <label for="model">Model:</label>
+    <input type="text" name="model" [(ngModel)]="model" class="form-control" id="model" >
+  </div>
+  <div class="form-group">
+    <label for="make">Make:</label>
+    <input type="text" name="make" [(ngModel)]="make" class="form-control" id="make" >
+  </div>
+  <div class="form-group">
+    <label for="year">Year:</label>
+    <input type="number" name="year" [(ngModel)]="year" class="form-control" id="year" >
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" name="price" [(ngModel)]="price" class="form-control" id="price" >
+  </div>
+  <div class="form-group">
+    <label for="stock">Stock:</label>
+    <input type="number" name="stock" [(ngModel)]="stock" class="form-control" id="stock" >
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" name="active" [(ngModel)]="active" class="form-control" id="active" >
+    <label class="form-check-label" for="active">Is Active</label>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+</div>
