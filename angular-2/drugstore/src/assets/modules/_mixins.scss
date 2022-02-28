@@ -6,3 +6,8 @@
     @content
   }
 };
+
+@mixin yellow-bg {
+  background-color: colors.$yellow;
+};
+
